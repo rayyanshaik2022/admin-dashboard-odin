@@ -11,3 +11,8 @@ sideBarBtns.forEach((btn) => {
         });
     }   
 });
+
+// Git Commit Card
+// Generate random # of commits & % change
+commitCounter = document.querySelector("#commit-counter");
+commitTag = document.querySelector("commit-tag");
