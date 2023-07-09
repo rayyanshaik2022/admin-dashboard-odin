@@ -15,6 +15,13 @@
     --highlight-green: #d6ffe0;
     --highlight-purple: #efd6ff;
     --highlight-red: #ffd6d6;
+    --highlight-yellow: #faffd6;
+
+    --highlight-blue-text: #67a9f4;
+    --highlight-green-text: #67f475;
+    --highlight-purple-text: #9167f4;
+    --highlight-red-text: #f46767;
+    --highlight-yellow-text: #f4ef67;
 }
 
 * {
@@ -238,7 +245,6 @@ main {
     columns: 2/3;
     display: grid;
     grid-template-rows: 15% 85%;
-    border: 1px solid var(--main-highlight);
 
     height: 120vh;
 }
@@ -397,6 +403,8 @@ main {
     align-items: center;
 
     transition: all 0.2s ease 0s;
+
+    animation: growAnimation 0.3s;
 }
 
 .todo-item.blue {
@@ -433,22 +441,90 @@ main {
 }
 
 p.blue {
-    color: #67a9f4;
+    color: var(--highlight-blue-text);
 }
 
 p.green {
-    color: #67f475;
+    color: var(--highlight-green-text);
 }
 
 p.purple {
-    color: #9167f4;
+    color: var(--highlight-purple-text);
 }
 
 p.red {
-    color: #f46767;
+    color: var(--highlight-red-text);
 }
 
 .todo-item:hover {
-    filter: brightness(95%);
-    transform: scale(1.1);
+    filter: brightness(96%);
+    transform: scale(1.05);
+}
+
+@keyframes growAnimation {
+    from {
+        transform: scale(0);
+    }
+    to {
+        transform: scale(1);
+    }
+}
+
+.tags {
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 4px;
+    gap: 12px;
+}
+
+@keyframes slideIn {
+    0% {
+        transform: translateX(-60px);
+        opacity: 0%;
+    }
+    100% {
+        transform: translateX(0);
+        opacity: 100%;
+    }
+}
+
+.tag {
+    height: 16px;
+    padding: 1px 4px;
+
+    font-size: 10px;
+    font-weight: 600;
+    border-radius: 5px;
+
+    animation: slideIn 0.8s forwards;
+}
+
+.tag:hover {
+    cursor: pointer;
+}
+
+.tag.green {
+    background-color: var(--highlight-green);
+    color: var(--highlight-green-text);
+}
+
+.tag.yellow {
+    background-color: var(--highlight-yellow);
+    color: var(--highlight-yellow-text);
+}
+.tag.blue {
+    background-color: var(--highlight-blue);
+    color: var(--highlight-blue-text);
+}
+.tag.purple {
+    background-color: var(--highlight-purple);
+    color: var(--highlight-purple-text);
+}
+.tag.red {
+    background-color: var(--highlight-red);
+    color: var(--highlight-red-text);
+}
+
+.tag > p {
+    filter: brightness(60%);
 }
