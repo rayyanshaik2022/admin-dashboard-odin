@@ -15,4 +15,21 @@ sideBarBtns.forEach((btn) => {
 // Git Commit Card
 // Generate random # of commits & % change
 commitCounter = document.querySelector("#commit-counter");
-commitTag = document.querySelector("commit-tag");
+commitTag = document.querySelector("#commit-tag");
+commitDesc = document.querySelector("#commit-tag-desc");
+
+let counter = Math.floor( Math.random() * 70 ) + 12;
+let tagPercent = Math.floor( Math.random() * 120 ) + 5;
+
+commitCounter.textContent = counter;
+commitTag.textContent = `+${tagPercent}%`;
+
+// Random chance for negative
+if (Math.random() < 0.4) {
+    tagPercent = Math.floor( Math.random() * 25 ) + 3;
+    commitTag.textContent = `-${tagPercent}%`;
+    commitDesc.textContent = "decrease from yesterday";
+
+    commitTag.classList.remove("green");
+    commitTag.classList.add("red");
+}
