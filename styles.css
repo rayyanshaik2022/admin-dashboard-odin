@@ -3,17 +3,19 @@
     --bg-color: #f6f5f8;
     --main-text-color: #333333;
     --light-text-color: #979797;
-    --soft-light-text-color: #c5c5c5;
+    --soft-light-text-color: #d5d5d5;
     --main-highlight: #429ccd;
 
     --nav-btn-active: #eeedf9;
+
+    --text-primary-dark: #1f1468;
 }
 
 * {
     margin: 0px;
     padding: 0px;
 
-    font-family: 'Open Sans', sans-serif;
+    font-family: "Open Sans", sans-serif;
     font-weight: 400;
 }
 
@@ -46,8 +48,6 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    
-
 }
 
 .logo {
@@ -62,7 +62,7 @@ body {
 }
 
 .logo > img {
-    width: clamp(26px, 5vw, 40px)
+    width: clamp(26px, 5vw, 40px);
 }
 
 .sidebar-footer {
@@ -71,7 +71,6 @@ body {
     display: flex;
     align-items: center;
     justify-content: center;
-
 }
 
 .sidebar-sticky {
@@ -100,7 +99,6 @@ body {
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
-    
 }
 
 .task-bar-title {
@@ -129,17 +127,21 @@ body {
     opacity: 100%;
 
     animation: progressBar 0.6s ease-in-out;
-    animation-fill-mode:both;
+    animation-fill-mode: both;
 }
 
-.task-bar-container:hover >.task-bar > .task-progress > .task-progess-fill {
+.task-bar-container:hover > .task-bar > .task-progress > .task-progess-fill {
     animation: progressBar 0.3 ease-in-out;
     animation-fill-mode: both;
 }
 
 @keyframes progressBar {
-    0% { width: 0; }
-    100% { width: 66.7%; }
+    0% {
+        width: 0;
+    }
+    100% {
+        width: 66.7%;
+    }
 }
 
 .side-nav {
@@ -156,7 +158,6 @@ body {
     flex-direction: column;
     justify-content: space-between;
     gap: 10px;
-    
 }
 
 .side-title {
@@ -179,7 +180,7 @@ body {
 .sidebar-btn {
     width: 100%;
     height: 35px;
-    
+
     background-color: #00000000;
     border: 2px solid #00000000;
     border-radius: 8px;
@@ -214,11 +215,13 @@ body {
 
 .sidebar-btn > img.icon {
     width: 25px;
-    filter: invert(61%) sepia(4%) saturate(0%) hue-rotate(129deg) brightness(101%) contrast(83%);
+    filter: invert(61%) sepia(4%) saturate(0%) hue-rotate(129deg)
+        brightness(101%) contrast(83%);
 }
 
 .sidebar-btn.selected > img.icon {
-    filter: invert(20%) sepia(0%) saturate(3125%) hue-rotate(202deg) brightness(91%) contrast(95%);
+    filter: invert(20%) sepia(0%) saturate(3125%) hue-rotate(202deg)
+        brightness(91%) contrast(95%);
 }
 
 .sidebar-btn.selected {
@@ -235,13 +238,97 @@ main {
 }
 
 .header {
-    width: 100%;
-    height: auto;
-    border: 1px solid red;
+    grid-template-columns: 2/3;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    padding: 0 4%;
+}
+
+.welcome,
+.time-text {
+    font-size: 42px;
+    font-weight: 700;
+    color: var(--text-primary-dark);
+}
+
+.account-info {
+    text-align: right;
+}
+.account-info > .name {
+    font-size: 16px;
+    font-weight: 700;
+    color: var(--text-primary-dark);
+}
+
+.account-info > .role {
+    font-size: 14px;
+    font-weight: 600;
+    color: var(--light-text-color);
+}
+
+.account-container {
+    display: flex;
+    justify-content: end;
+    align-items: center;
+    gap: 10px;
+}
+
+.account-img {
+    width: 36px;
+    height: 36px;
+
+    min-width: 20px;
+    flex-shrink: 0;
+
+    border-radius: 50%;
+    border: 2px solid var(--text-primary-dark);
+
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+    background-image: url("./assets/profile-pic-bright.jpg");
+}
+
+.header-right {
+    display: flex;
+    align-items: center;
+    gap: 18px;
+}
+.v-bar {
+    width: 2px;
+    height: 45px;
+    background-color: var(--soft-light-text-color);
+}
+
+.todays-date {
+    height: 40px;
+    width: 112px;
+
+    background-color: #e8e5e5;
+    border-radius: 12px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+
+    user-select: none;
+}
+
+.todays-date > .icon {
+    width: 24px;
+    filter: invert(13%) sepia(36%) saturate(4223%) hue-rotate(237deg) brightness(57%) contrast(112%);
+}
+
+.cal-text {
+    color: var(--text-primary-dark);
+    font-size: 16px;
+    font-weight: 700;
 }
 
 .content {
     width: 100%;
-    height: 12;
-    border: 1px solid green;
 }

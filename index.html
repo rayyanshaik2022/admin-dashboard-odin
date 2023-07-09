@@ -36,19 +36,39 @@
                                 <div class="h-bar"></div>
                             </div>
                             <button class="sidebar-btn selected">
-                                <img src="./assets/dashboard.svg" alt="dashboard-icon" class="icon" draggable="false">
+                                <img
+                                    src="./assets/dashboard.svg"
+                                    alt="dashboard-icon"
+                                    class="icon"
+                                    draggable="false"
+                                />
                                 <p>Dashboard</p>
                             </button>
-                            <button class="sidebar-btn ">
-                                <img src="./assets/task-icon.svg" alt="task-icon" class="icon" draggable="false">
+                            <button class="sidebar-btn">
+                                <img
+                                    src="./assets/task-icon.svg"
+                                    alt="task-icon"
+                                    class="icon"
+                                    draggable="false"
+                                />
                                 <p>Task-List</p>
                             </button>
-                            <button class="sidebar-btn ">
-                                <img src="./assets/note-icon.svg" alt="task-icon" class="icon" draggable="false">
+                            <button class="sidebar-btn">
+                                <img
+                                    src="./assets/note-icon.svg"
+                                    alt="task-icon"
+                                    class="icon"
+                                    draggable="false"
+                                />
                                 <p>Notes</p>
                             </button>
-                            <button class="sidebar-btn ">
-                                <img src="./assets/assignment-icon.svg" alt="task-icon" class="icon" draggable="false">
+                            <button class="sidebar-btn">
+                                <img
+                                    src="./assets/assignment-icon.svg"
+                                    alt="task-icon"
+                                    class="icon"
+                                    draggable="false"
+                                />
                                 <p>Assignments</p>
                             </button>
                         </div>
@@ -58,11 +78,21 @@
                                 <div class="h-bar"></div>
                             </div>
                             <button class="sidebar-btn">
-                                <img src="./assets/sleep-icon.svg" alt="dashboard-icon" class="icon" draggable="false">
+                                <img
+                                    src="./assets/sleep-icon.svg"
+                                    alt="dashboard-icon"
+                                    class="icon"
+                                    draggable="false"
+                                />
                                 <p>Sleep Schedule</p>
                             </button>
-                            <button class="sidebar-btn ">
-                                <img src="./assets/terminal-icon.svg" alt="task-icon" class="icon" draggable="false">
+                            <button class="sidebar-btn">
+                                <img
+                                    src="./assets/terminal-icon.svg"
+                                    alt="task-icon"
+                                    class="icon"
+                                    draggable="false"
+                                />
                                 <p>Code Metrics</p>
                             </button>
                         </div>
@@ -72,11 +102,21 @@
                                 <div class="h-bar"></div>
                             </div>
                             <button class="sidebar-btn no-select">
-                                <img src="./assets/dark-mode-icon.svg" alt="dashboard-icon" class="icon" draggable="false">
+                                <img
+                                    src="./assets/dark-mode-icon.svg"
+                                    alt="dashboard-icon"
+                                    class="icon"
+                                    draggable="false"
+                                />
                                 <p>Dark Mode</p>
                             </button>
                             <button class="sidebar-btn no-select">
-                                <img src="./assets/settings-icon.svg" alt="task-icon" class="icon" draggable="false">
+                                <img
+                                    src="./assets/settings-icon.svg"
+                                    alt="task-icon"
+                                    class="icon"
+                                    draggable="false"
+                                />
                                 <p>Settings</p>
                             </button>
                         </div>
@@ -97,8 +137,31 @@
                 </div>
             </div>
             <main>
-                <div class="header"></div>
-                <div class="content"></div>
+                <div class="header">
+                    <div class="welcome">
+                        <span class="time-text">Goodmorning</span>, Rayyan
+                    </div>
+                    <div class="header-right">
+                        <div class="todays-date">
+                            <img draggable="false" class="icon" src="./assets/calendar-icon.svg" alt="calendar-icon">
+                            <p id="cal-day" class="cal-text">9</p>
+                            <p id="cal-month" class="cal-text">Jul</p>
+                        </div>
+                        <div class="v-bar"></div>
+                        <div class="account-container">
+                            <div class="account-info">
+                                <div class="name">Rayyan Shaik</div>
+                                <div class="role">Student</div>
+                            </div>
+                            <div class="account-img"></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="content">
+                    <div class="task-list card"></div>
+                    <div class="note card"></div>
+                    <div class="github card"></div>
+                </div>
             </main>
         </div>
     </body>
