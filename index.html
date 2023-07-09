@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Study Board</title>
+
+        <link rel="stylesheet" href="./styles.css" />
+        <script src="./script.js" defer></script>
+
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;500;600;700&display=swap"
+            rel="stylesheet"
+        />
+    </head>
+    <body>
+        <div class="container">
+            <div class="sidebar">
+                <div class="logo-container">
+                    <div class="logo">
+                        <img
+                            src="./assets/study-icon.svg"
+                            alt="study-icon-logo"
+                            draggable="false"
+                        />
+                        Study
+                    </div>
+                </div>
+                <div class="side-nav">
+                    <div class="side-section">
+                        <div class="side-title">
+                            MAIN MENU
+                            <div class="h-bar"></div>
+                        </div>
+                        <button class="sidebar-btn selected">
+                            <img src="./assets/dashboard.svg" alt="dashboard-icon" class="icon" draggable="false">
+                            <p>Dashboard</p>
+                        </button>
+                        <button class="sidebar-btn ">
+                            <img src="./assets/task-icon.svg" alt="task-icon" class="icon" draggable="false">
+                            <p>Task-List</p>
+                        </button>
+                        <button class="sidebar-btn ">
+                            <img src="./assets/note-icon.svg" alt="task-icon" class="icon" draggable="false">
+                            <p>Notes</p>
+                        </button>
+                        <button class="sidebar-btn ">
+                            <img src="./assets/assignment-icon.svg" alt="task-icon" class="icon" draggable="false">
+                            <p>Assignments</p>
+                        </button>
+                    </div>
+                    <div class="side-section">
+                        <div class="side-title">
+                            ANALYTICS
+                            <div class="h-bar"></div>
+                        </div>
+                        <button class="sidebar-btn">
+                            <img src="./assets/sleep-icon.svg" alt="dashboard-icon" class="icon" draggable="false">
+                            <p>Sleep Schedule</p>
+                        </button>
+                        <button class="sidebar-btn ">
+                            <img src="./assets/terminal-icon.svg" alt="task-icon" class="icon" draggable="false">
+                            <p>Code Metrics</p>
+                        </button>
+                    </div>
+                    <div class="side-section">
+                        <div class="side-title">
+                            PREFERENCES
+                            <div class="h-bar"></div>
+                        </div>
+                        <button class="sidebar-btn no-select">
+                            <img src="./assets/dark-mode-icon.svg" alt="dashboard-icon" class="icon" draggable="false">
+                            <p>Dark Mode</p>
+                        </button>
+                        <button class="sidebar-btn no-select">
+                            <img src="./assets/settings-icon.svg" alt="task-icon" class="icon" draggable="false">
+                            <p>Settings</p>
+                        </button>
+                    </div>
+                </div>
+                <div class="sidebar-footer">
+                    <div class="task-bar-container">
+                        <div class="task-bar-text">
+                            <div class="task-bar-title">Today's Tasks</div>
+                            <div class="task-bar-number">4 / 6</div>
+                        </div>
+                        <div class="task-bar">
+                            <div class="task-progress">
+                                <div class="task-progess-fill"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <main>
+                <div class="header"></div>
+                <div class="content"></div>
+            </main>
+        </div>
+    </body>
+</html>
