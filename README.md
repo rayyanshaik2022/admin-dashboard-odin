@@ -14,11 +14,11 @@ This project took about 11 hours to complete
 
 ## Features & Improvements
 
+* __Responsiveness__ : Full responsiveness (including mobile) through media queries
 * __Functional Sidebar__
 * __Clean & Modern Design__
 * __Grid display practice__
 
 ## Issues & Todo
 
-* __Responsiveness__ : not very responsive on mobile devices. This could probably be fixed by removing the sidebar at low screen widths.
 
