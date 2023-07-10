@@ -11,7 +11,7 @@
     --nav-btn-active: #eeedf9;
     --nav-btn-active: #e8f3f9;
 
-    --text-primary-dark: #1f1468;
+    --text-primary-dark: #333333;
 
     --highlight-blue: #d6e9ff;
     --highlight-green: #d6ffe0;
@@ -144,11 +144,6 @@ body {
     opacity: 100%;
 
     animation: progressBar 0.6s ease-in-out;
-    animation-fill-mode: both;
-}
-
-.task-bar-container:hover > .task-bar > .task-progress > .task-progess-fill {
-    animation: progressBar 0.3 ease-in-out;
     animation-fill-mode: both;
 }
 
@@ -300,12 +295,12 @@ main {
     flex-shrink: 0;
 
     border-radius: 50%;
-    border: 2px solid var(--text-primary-dark);
+    border: 1px solid var(--text-primary-dark);
 
     background-repeat: no-repeat;
     background-position: center center;
     background-size: cover;
-    background-image: url("./assets/profile-pic-bright.jpg");
+    background-image: url("./assets/my-profile.jpg");
 }
 
 .account-img:hover {
@@ -545,7 +540,7 @@ p.red {
 
 .commit-grid.card-content {
     display: grid;
-    grid-template-rows: 5fr 5fr ;
+    grid-template-rows: 5fr 5fr;
 }
 
 .calendar-board {
@@ -567,7 +562,6 @@ p.red {
     justify-content: center;
     align-items: center;
     flex-direction: column;
-
 }
 
 .calendar-tile {
@@ -599,7 +593,6 @@ p.red {
 }
 
 .tag-p > .tag {
-    
     height: 20px;
     pad: 4px 8px;
 
@@ -607,10 +600,9 @@ p.red {
     font-weight: 600;
     border-radius: 5px;
 
-   justify-self: center;
+    justify-self: center;
 
-   user-select: none;
-
+    user-select: none;
 }
 
 .counter > p {
@@ -630,9 +622,7 @@ p.red {
 
 #commit-tag {
     cursor: default;
-    
 }
-
 
 .grid-item-lg {
     padding: 1% 2%;
@@ -641,13 +631,11 @@ p.red {
     grid-row: 2 / 3;
 
     position: static;
-
 }
 
 .grid-item-lg > .card {
     display: grid;
     grid-template-rows: 1fr 6fr;
-    
 }
 
 .grid-item-lg > .card > .card-title {

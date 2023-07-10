@@ -42,7 +42,7 @@ const line_chart_data = {
             label: "Average Hours Slept",
             backgroundColor: "rgb(139, 211, 250)",
             borderColor: "rgb(139, 211, 250)",
-            data: [8.7, 8.1, 6.4, 7.2, 6.0, 5.9,3],
+            data: [8.7, 8.1, 6.4, 7.2, 6.0, 5.9, 3],
         },
     ],
 };
@@ -72,19 +72,31 @@ if (hour < 12 && hour >= 3) {
 
 const calDay = document.querySelector("#cal-day");
 const calMonth = document.querySelector("#cal-month");
-const months = ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"];
+const months = [
+    "Jan",
+    "Feb",
+    "Mar",
+    "Apr",
+    "May",
+    "Jun",
+    "Jul",
+    "Aug",
+    "Sep",
+    "Oct",
+    "Nov",
+    "Dec",
+];
 
 calDay.textContent = date.getDate();
 calMonth.textContent = months[date.getMonth()];
 
 // Update calendar card
-const weekdays = ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"]
+const weekdays = ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"];
 const today = new Date();
 const yesterday = new Date();
-yesterday.setDate(today.getDate() - 1)
+yesterday.setDate(today.getDate() - 1);
 const tomorrow = new Date();
 tomorrow.setDate(today.getDate() + 1);
-
 
 const prevText = document.querySelector("#prev-tile > .day-text");
 const prevNum = document.querySelector("#prev-tile > .day-num");
