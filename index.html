@@ -6,6 +6,9 @@
         <title>Study Board</title>
 
         <link rel="stylesheet" href="./styles.css" />
+
+        <!-- chart.js connection -->
+        <script src="https://cdn.jsdelivr.net/npm/chart.js" defer></script>
         <script src="./script.js" defer></script>
 
         <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -125,7 +128,7 @@
                         <div class="task-bar-container">
                             <div class="task-bar-text">
                                 <div class="task-bar-title">Today's Tasks</div>
-                                <div class="task-bar-number">4 / 6</div>
+                                <div class="task-bar-number">8 / 12</div>
                             </div>
                             <div class="task-bar">
                                 <div class="task-progress">
@@ -229,12 +232,12 @@
                                         <a
                                             href="https://www.youtube.com/live/jfKfPfyJRdk?feature=share"
                                             target="_blank"
-                                            ><div class="tag purple">
-                                                <p>
-                                                    #https://www.youtube.com/live/jfKfPfyJRdk?feature=share
-                                                </p>
-                                            </div></a
+                                            class="tag purple"
                                         >
+                                            <p>
+                                                #https://www.youtube.com/live/jfKfPfyJRdk?feature=share
+                                            </p>
+                                        </a>
                                     </div>
                                 </div>
                             </div>
@@ -271,13 +274,31 @@
                                     <div class="counter">
                                         <p id="commit-counter">19</p>
                                         <div class="tag-p">
-                                            <div id="commit-tag" class="tag green">+37%</div>
-                                            <p id="commit-tag-desc">increase from yesterday</p>
+                                            <div
+                                                id="commit-tag"
+                                                class="tag green"
+                                            >
+                                                +37%
+                                            </div>
+                                            <p id="commit-tag-desc">
+                                                increase from yesterday
+                                            </p>
                                         </div>
                                     </div>
                                 </div>
                             </div>
                         </div>
+                    </div>
+                    <div class="grid-item-lg">
+                        <div class="card">
+                            <div class="card-title">Sleep Tracker</div>
+                            <div class="chart-container">
+                                <canvas id="sleep-chart"></canvas>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="grid-item-sm">
+                        <div class="card"></div>
                     </div>
                 </div>
             </main>
