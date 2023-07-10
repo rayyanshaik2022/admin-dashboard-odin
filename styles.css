@@ -52,8 +52,6 @@ body {
 
 }
 
-main {
-}
 
 .sidebar {
     grid-column: 1 / 1;
@@ -689,4 +687,45 @@ p.assignment-title {
 .email-link {
     text-decoration: none;
     color: var(--highlight-blue-text)
+}
+
+@media screen and (max-width: 1120px) {
+    .sidebar {
+        display: none;
+    }
+    .container {
+   
+        grid-template-columns: 4fr;
+    }
+}
+
+@media screen and (max-width: 900px) {
+    @media screen and (max-width: 1120px) {
+        .sidebar {
+            display: none;
+        }
+
+        .content {
+
+            display: flex;
+            flex-direction: column;
+        }
+
+        .grid-item-sm {
+            padding: 2% 4%;
+            min-width: 300px;
+        }
+
+        .header-right {
+            display: none;
+        }
+
+        .welcome {
+            text-align: center;
+        }
+
+        .header {
+            justify-content: center;
+        }
+    }
 }
