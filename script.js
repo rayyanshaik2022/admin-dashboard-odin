@@ -57,3 +57,47 @@ const lineChart = new Chart(
     document.getElementById("sleep-chart"),
     line_chart_config
 );
+
+// Welcome text & Calendar
+const date = new Date();
+const hour = date.getHours();
+const timeText = document.querySelector(".time-text");
+if (hour < 12 && hour >= 3) {
+    timeText.textContent = "Good morning";
+} else if (hour < 12 + 6 && hour >= 12) {
+    timeText.textContent = "Good afternoon";
+} else {
+    timeText.textContent = "Good evening";
+}
+
+const calDay = document.querySelector("#cal-day");
+const calMonth = document.querySelector("#cal-month");
+const months = ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"];
+
+calDay.textContent = date.getDate();
+calMonth.textContent = months[date.getMonth()];
+
+// Update calendar card
+const weekdays = ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"]
+const today = new Date();
+const yesterday = new Date();
+yesterday.setDate(today.getDate() - 1)
+const tomorrow = new Date();
+tomorrow.setDate(today.getDate() + 1);
+
+
+const prevText = document.querySelector("#prev-tile > .day-text");
+const prevNum = document.querySelector("#prev-tile > .day-num");
+const currText = document.querySelector("#curr-tile > .day-text");
+const currNum = document.querySelector("#curr-tile > .day-num");
+const nextText = document.querySelector("#next-tile > .day-text");
+const nextNum = document.querySelector("#next-tile > .day-num");
+
+prevText.textContent = weekdays[yesterday.getDay()];
+prevNum.textContent = yesterday.getDate();
+
+currText.textContent = weekdays[today.getDay()];
+currNum.textContent = today.getDate();
+
+nextText.textContent = weekdays[tomorrow.getDay()];
+nextNum.textContent = tomorrow.getDate();
