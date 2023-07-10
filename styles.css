@@ -68,11 +68,12 @@ body {
 }
 
 .logo-container {
-    height: 14%;
+    height: 8%;
 
     display: flex;
     justify-content: center;
     align-items: center;
+
 }
 
 .logo {
